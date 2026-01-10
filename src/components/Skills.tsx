@@ -1,72 +1,79 @@
-import { Brain, Cloud, Code2, Database, GitBranch, Wrench } from "lucide-react";
+import { Code2, Database, Globe, Wrench, Server, Cpu } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "AI & Machine Learning",
-    icon: Brain,
-    skills: ["TensorFlow", "PyTorch", "LangChain", "OpenAI APIs", "Hugging Face"],
-  },
-  {
-    title: "Cloud & DevOps",
-    icon: Cloud,
-    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"],
-  },
-  {
-    title: "Backend Development",
-    icon: Database,
-    skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis"],
-  },
-  {
-    title: "Frontend Development",
+    title: "Languages",
     icon: Code2,
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vite"],
+    skills: ["Java", "SQL", "JavaScript", "Python", "Solidity"],
   },
   {
-    title: "Tools & Platforms",
+    title: "Development",
+    icon: Globe,
+    skills: ["React.js", "Node.js", "Express.js", "HTML-CSS", "Tailwind"],
+  },
+  {
+    title: "DevOps & Cloud",
+    icon: Server,
+    skills: ["Docker", "Kubernetes", "AWS", "GitHub Actions"],
+  },
+  {
+    title: "AI and ML",
+    icon: Database,
+    skills: ["Tensorflow", "PyTorch", "Keras", "Scikit-learn", "OpenCV","NLP"],
+  },
+  {
+    title: "Agentic AI ",
+    icon: Database,
+    skills: ["MCP Servers", "RAG", "n8n"],
+  },
+  {
+    title: "Tools & Software",
     icon: Wrench,
-    skills: ["Git", "Linux", "VS Code", "Postman", "Figma"],
+    skills: ["Git", "Cursor", "Postman", "Linux","Firebase"],
   },
   {
-    title: "Version Control",
-    icon: GitBranch,
-    skills: ["GitHub", "GitLab", "Git Flow", "Code Review", "Open Source"],
+    title: "Core Concepts",
+    icon: Cpu,
+    skills: ["Data Structures", "Algorithms", "OOP", "DBMS", "OS", "Networking"],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-muted/30">
+    <section id="skills" className="py-32 bg-background relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
-            Tech Stack
-          </h2>
-          <p className="text-xl text-muted-foreground text-center mb-16">
-            Technologies I work with daily
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Technical Arsenal
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              A comprehensive toolkit for building scalable, secure, and performant applications.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
               return (
-                <div 
+                <div
                   key={index}
-                  className="bg-card p-6 rounded-xl shadow-sm border border-border"
+                  className="bg-card p-8 rounded-3xl border border-border/50 hover:border-accent/30 transition-all hover:shadow-lg group"
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-accent" />
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-secondary rounded-2xl flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+                      <Icon className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground">
+                    <h3 className="text-xl font-bold text-foreground">
                       {category.title}
                     </h3>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, idx) => (
-                      <span 
+                      <span
                         key={idx}
-                        className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-md"
+                        className="px-3 py-1.5 bg-background border border-border text-muted-foreground text-sm rounded-lg font-medium hover:text-foreground hover:border-accent/50 transition-colors cursor-default"
                       >
                         {skill}
                       </span>
