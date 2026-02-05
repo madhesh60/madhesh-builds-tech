@@ -6,10 +6,13 @@ import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 // Images
 import cardanoImage from "@/hackathonsAssets/cardanoImage1.jpeg";
 import cardanoImage1 from "@/hackathonsAssets/cardanoImage.jpeg";
+import cardanoImage2 from "@/hackathonsAssets/cardanoImage2.jpeg";  
 import retailImage from "@/hackathonsAssets/retailImage.png";
 import retailImage1 from "@/hackathonsAssets/retailImage1.png";
 import baselineImage from "@/hackathonsAssets/baselineImage.jpeg";
 import baselineImage1 from "@/hackathonsAssets/baselineImage1.jpeg";
+import safeMintImage from "@/hackathonsAssets/safeMintImage.jpeg";
+import safeMintImage1 from "@/hackathonsAssets/safeMintImage1.jpeg";
 
 // Placeholder for handling missing images gracefully
 // We use cardanoImage as a fallback for missing images to ensure the build passes
@@ -25,10 +28,18 @@ interface Hackathon {
 
 const hackathons: Hackathon[] = [
     {
+        title: "SafeMint Platform",
+        date: "Jan 2026",
+        description: "A platform making tokenization accessible, secure, and scam-resistant. Features zero pre-mined tokens, automatic liquidity locking, and trust indicators to ensure fair launches and safe trading.",
+        images: [safeMintImage,safeMintImage1],
+        tags: ["Blockchain", "Tokenization", "Docker", "Solidity"],
+        achievement: "Winner - First Place"
+    },
+    {
         title: "Cardano Asia IBW Hackathon",
         date: "Nov 2025",
         description: "Built a ZkProof Lending Porotocol within 30 hours",
-        images: [cardanoImage, cardanoImage1],
+        images: [cardanoImage, cardanoImage1,cardanoImage2],
         tags: ["DeFi", "ZkProof", "Lending Protocol"],
         achievement: "Finalist [Top 200/3000+]"
     },
@@ -37,8 +48,8 @@ const hackathons: Hackathon[] = [
         date: "Dec 2025",
         description: "Built a GenAI Retail Creative and Management System with retail guidelines",
         images: [retailImage, retailImage1],
-        tags: ["GenAI", "OpenCV", "Image Processing"],
-        achievement: "Finalist"
+        tags: ["GenAI", "OpenCV", "Image Processing","Docker","Kubernetes","GitActions"],
+        achievement: "Finalist [Top 40/9000+]"
     },
     {
         title: "Google's Baseline Hackathon",

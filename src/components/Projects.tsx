@@ -12,7 +12,7 @@ const projects = [
   {
     title: "CREO for Retail",
     subtitle: " A GenAI Creative genartion and management System",
-    description: "Built a GenAI Retail Creative and Management System with retail guidelines",
+    description: "Built a GenAI Retail Creative and Management System with retail guidelines. Implemented a fail-fast validation engine to block forbidden claims, pricing errors, alcohol violations, and layout breaches,reducing rejection risk by 60%. ",
     tags: ["OpenCV", "GenAI", "Image Processing"],
     github: "https://github.com/madhesh60/CREO-for-retail",
     image: null
