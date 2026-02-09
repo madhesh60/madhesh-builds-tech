@@ -85,11 +85,9 @@ build: {
       },
     },
   },
-  minify: 'terser',
-  terserOptions: {
-    compress: {
-      drop_console: mode === 'production',
-    },
+  minify: 'esbuild',
+  esbuild: {
+    drop: mode === 'production' ? ['console', 'debugger'] : [],
   },
   chunkSizeWarningLimit: 1000,
 }
@@ -97,7 +95,7 @@ build: {
 
 **Benefits:**
 - Better caching strategy with vendor chunks
-- Smaller bundle sizes through minification
+- Lightning fast builds with `esbuild`
 - Removed console logs in production
 - Optimized chunk splitting
 
@@ -135,7 +133,7 @@ build: {
 1. **Lazy Loading:** Components load on-demand
 2. **Code Splitting:** Separate vendor bundles
 3. **Font Optimization:** `display=swap` for Google Fonts
-4. **Minification:** Terser for production builds
+4. **Minification:** Esbuild for production builds
 5. **Tree Shaking:** Removed unused code
 
 ## 6. Formal Theme Elements

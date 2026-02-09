@@ -14,7 +14,7 @@ const skillCategories = [
   {
     title: "DevOps & Cloud",
     icon: Server,
-    skills: ["Docker", "Kubernetes", "AWS", "GitHub Actions","Kafka","Redis","Prometheus","Grafana"],
+    skills: ["Docker", "Kubernetes", "AWS", "GitHub Actions","Kafka","Redis"],
   },
   {
     title: "DL and ML",
