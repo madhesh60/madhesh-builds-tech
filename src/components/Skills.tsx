@@ -4,7 +4,7 @@ const skillCategories = [
   {
     title: "Languages",
     icon: Code2,
-    skills: ["Java", "SQL", "JavaScript", "Python", "Solidity"],
+    skills: ["Java", "SQL", "JavaScript", "Python", "Solidity","TypeScript","Rust","Go"],
   },
   {
     title: "Development",
@@ -14,22 +14,22 @@ const skillCategories = [
   {
     title: "DevOps & Cloud",
     icon: Server,
-    skills: ["Docker", "Kubernetes", "AWS", "GitHub Actions"],
+    skills: ["Docker", "Kubernetes", "AWS", "GitHub Actions","Kafka","Redis","Prometheus","Grafana"],
   },
   {
-    title: "AI and ML",
+    title: "DL and ML",
     icon: Database,
-    skills: ["Tensorflow", "PyTorch", "Keras", "Scikit-learn", "OpenCV","NLP"],
+    skills: ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "OpenCV", "NLP"],
   },
   {
-    title: "Agentic AI ",
+    title: "Agentic AI",
     icon: Database,
-    skills: ["MCP Servers", "RAG", "n8n"],
+    skills: ["MCP Servers", "RAG", "n8n","LangChain","LangGraph","LangSmith"],
   },
   {
     title: "Tools & Software",
     icon: Wrench,
-    skills: ["Git", "Cursor", "Postman", "Linux","Firebase"],
+    skills: ["Git", "Cursor", "Postman", "Linux", "Firebase"],
   },
   {
     title: "Core Concepts",
@@ -40,29 +40,29 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-32 bg-background relative">
+    <section id="skills" className="py-24 bg-muted/30 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Technical Arsenal
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive toolkit for building scalable, secure, and performant applications.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              A comprehensive toolkit for building scalable, secure, and performant applications
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
               return (
                 <div
                   key={index}
-                  className="bg-card p-8 rounded-3xl border border-border/50 hover:border-accent/30 transition-all hover:shadow-lg group"
+                  className="bg-card p-8 rounded-2xl border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-md group"
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-secondary rounded-2xl flex items-center justify-center group-hover:bg-accent/10 transition-colors">
-                      <Icon className="w-6 h-6 text-foreground group-hover:text-accent transition-colors" />
+                    <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                      <Icon className="w-6 h-6 text-accent transition-colors" />
                     </div>
                     <h3 className="text-xl font-bold text-foreground">
                       {category.title}
@@ -73,7 +73,7 @@ const Skills = () => {
                     {category.skills.map((skill, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1.5 bg-background border border-border text-muted-foreground text-sm rounded-lg font-medium hover:text-foreground hover:border-accent/50 transition-colors cursor-default"
+                        className="px-3 py-1.5 bg-secondary/80 border border-border text-foreground text-sm rounded-lg font-medium hover:bg-secondary hover:border-accent/50 transition-colors cursor-default"
                       >
                         {skill}
                       </span>

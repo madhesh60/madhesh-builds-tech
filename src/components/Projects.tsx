@@ -2,7 +2,7 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "SafeMint / QIEDEX",
+    title: "SafeMint",
     subtitle: "Trust-First Token Launchpad",
     description: "Built a trust-first DeFi token launch platform enforcing mandatory liquidity locks and fair-launch rules to prevent rug pulls. Implemented token, validator, and governance dashboards with real-time trust status.",
     tags: ["React.js", "Solidity", "Express", "Docker", "QIEDEX SDK"],
