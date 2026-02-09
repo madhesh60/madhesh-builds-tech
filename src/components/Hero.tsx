@@ -1,5 +1,5 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-import profileImage from "@/assets/profile.jpg";
+import profileImage from "@/assets/profile.jpeg";
 
 const Hero = () => {
   return (
